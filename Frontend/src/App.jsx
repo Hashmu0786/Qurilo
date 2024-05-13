@@ -36,6 +36,7 @@ function App() {
         });
       }
       const responseData = await response.json();
+      // console.log(responseData);
       setProducts(responseData);
     } catch (error) {
       console.log(error);

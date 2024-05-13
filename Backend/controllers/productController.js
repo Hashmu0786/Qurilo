@@ -2,8 +2,9 @@ const User = require("../models/productSchema")
 
 exports.create = async(req,res) =>{
     try{
-        const {name,imageURL,price} = req.body;
-
+        const { name, price } = req.body;
+        const imageURL = req.file.path;
+        
         const newUser = new User({name,imageURL,price});
         await newUser.save();
         res.status(201).json({message:"Data Added",user:newUser});

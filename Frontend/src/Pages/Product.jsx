@@ -9,6 +9,7 @@ import { MdDeleteForever, MdEditSquare } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+// import { path } from "../../../Backend/uploads";
 
 export default function Product({
   products,
@@ -128,7 +129,7 @@ export default function Product({
               <div key={index} className="group relative">
                 <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                   <img
-                    src={item.imageURL}
+                    src={`http://localhost:5000/${item.imageURL}`}
                     alt={item.name}
                     className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                   />

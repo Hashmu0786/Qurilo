@@ -71,8 +71,8 @@ export default function Cart({ matchingProducts }) {
               <div className="flex w-full space-x-2 sm:space-x-4">
                 <img
                   className="flex-shrink-0 object-cover w-20 h-20 dark:border-transparent rounded outline-none sm:w-32 sm:h-32 dark:bg-gray-500"
-                  src={item.imageURL}
-                  alt={item.name} // Provide meaningful alt text
+                  src={`http://localhost:5000/${item.imageURL}`}
+                  alt={item.name}
                 />
                 <div className="flex flex-col justify-between w-full pb-4">
                   <div className="flex justify-between w-full pb-2 space-x-2">
@@ -80,7 +80,6 @@ export default function Cart({ matchingProducts }) {
                       <h3 className="text-lg font-semibold leading-sm:pr-8">
                         {item.name}
                       </h3>
-                      {/* You can add a description here if needed */}
                     </div>
                     <div className="text-right">
                       <p className="text-lg font-semibold">
